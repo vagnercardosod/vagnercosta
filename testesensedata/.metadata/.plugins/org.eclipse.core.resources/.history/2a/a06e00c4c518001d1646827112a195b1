@@ -1,0 +1,14 @@
+
+
+@teste
+Feature: compra
+como usuario que realizar uma compra
+
+  @tag1
+  Scenario: acessar um site e realizar login
+    Given esteja na tela de login 
+    When preencha as infomacoes
+    Then entro na pagina
+    
+
+  

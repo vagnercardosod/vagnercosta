@@ -1,0 +1,32 @@
+package projeto.automacao;
+
+import static org.junit.Assert.assertEquals;
+
+import java.io.IOException;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+import metodos.MetodosDeTestes;
+
+public class PrimeiroTeste {
+
+	MetodosDeTestes metodos = new MetodosDeTestes();
+
+	@Before // ele e executado antes de qualquer teste
+	public void setUp() throws Exception {
+metodos.abrirNavegador("https://www.amazon.com.br/");
+	}
+
+	@After // ele e executado apos qualquer teste
+	public void tearDown() throws Exception {
+          metodos.fecharNavegador();
+	}
+
+	@Test
+	public void validarTitel() throws IOException {
+		metodos.validartitle("Amazon.com.br | Tudo pra você, de A a Z.");
+		metodos.evidenciarTeste("ct01 - validando titulo");
+	}
+}

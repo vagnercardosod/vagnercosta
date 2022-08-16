@@ -1,0 +1,44 @@
+package testesensedata;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+
+import metodos.MetodosDeTeste;
+
+public class TesteSenseData_OrganizarTest {
+	MetodosDeTeste metodos = new MetodosDeTeste();
+	By pesquisar ;
+	
+
+
+	@Before
+	public void setUp() throws Exception {
+		metodos.abrirNavegador(" https://www.saucedemo.com/inventory.html");
+	
+	}
+
+	@After
+	public void tearDown() throws Exception {
+		
+		
+	}
+	
+
+	@Test
+	public void fazerlogin () {
+		By seletor = By.xpath("//input[@id=\"header_container\"]/div[2]/div[2]/span/select/option[3]");
+		metodos.clicar(seletor);
+		
+		/*By senha = By.xpath("//input[@id=\"password\"]");
+		metodos.escrever( senha , "secret_sauce");
+	
+		By click =  By.xpath("//input[@id=\"login-button\"]");
+		metodos.clicar(click);
+
+	}*/
+
+	}
+	
+

@@ -1,0 +1,39 @@
+package projeto.automacao;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class PrimeiroTeste {
+	
+	WebDriver driver;
+
+	@Before // ele e executado antes de qualquer teste
+	public void setUp() throws Exception {
+		System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver.exe");
+		  driver = new ChromeDriver();
+		  driver.manage().window().maximize();
+	}
+ 
+	@After // ele e executado apos qualquer teste
+	public void tearDown() throws Exception {
+	}
+
+	@Test
+	public void e2etreinamentos() {
+ driver.get("https://www.e2etreinamentos.com.br");
+	}
+
+	@Test
+	public void google() {
+		driver.get("https://www.google.com.br");
+	}
+	
+	@Test
+	public void amazon() {
+		driver.get("https://www.amazon.com.br");
+	}
+
+}

@@ -1,0 +1,52 @@
+package testesensedata;
+
+import java.awt.Button;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import metodos.MetodosDeTeste;
+
+public class TesteSenseData_Login {
+	
+	MetodosDeTeste metodos = new MetodosDeTeste();
+	By pesquisar ;
+	
+
+
+	@Before
+	public void setUp() throws Exception {
+		metodos.abrirNavegador(" https://www.saucedemo.com/inventory.html");
+	
+	}
+
+	@After
+	public void tearDown() throws Exception {
+		
+		
+	}
+	
+
+	@Test
+	public void fazerlogin () {
+		By pesquisar = By.xpath("//input[@id=\"header_container\"]/div[2]/div[2]/span/select");
+		metodos.clicar(pesquisar);
+		
+		By valor = By.xpath("//input//*[@id=\"header_container\"]/div[2]/div[2]/span/select/option[3]");
+	metodos.clicar(valor);
+	
+		//By click =  By.xpath("//input[@id=\"login-button\"]");
+		//metodos.clicar(click);
+
+	}
+
+	}
+	
+	
+	
+	
+
+

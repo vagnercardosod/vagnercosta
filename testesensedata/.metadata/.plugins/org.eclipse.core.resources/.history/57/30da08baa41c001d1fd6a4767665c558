@@ -1,0 +1,38 @@
+package testesensedata;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+import org.openqa.selenium.By;
+
+import metodos.MetodosDeTeste;
+
+public class TesteSenseData {
+	
+	MetodosDeTeste metodos = new MetodosDeTeste();
+	By pesquisar = By.xpath("//input[@id=\"user-name\"]");
+	
+
+
+	@Before
+	public void setUp() throws Exception {
+		metodos.abrirNavegador(" https://www.saucedemo.com");
+	
+	}
+
+	@After
+	public void tearDown() throws Exception {
+		
+		
+	}
+	
+
+	@Test
+	public void fazerlogin () {
+		metodos.escrever( pesquisar , "standard_user");
+		metodo
+		
+
+}

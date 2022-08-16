@@ -1,0 +1,24 @@
+package projeto.automacao;
+
+import static org.junit.Assert.*;
+
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
+
+public class PrimeiroTeste {
+
+	@Before // ele e executado antes de qualquer teste
+	public void setUp() throws Exception {
+	}
+
+	@After // ele e executado apos qualquer teste
+	public void tearDown() throws Exception {
+	}
+
+	@Test
+	public void 2e2treinamentos() {
+		
+	}
+
+}

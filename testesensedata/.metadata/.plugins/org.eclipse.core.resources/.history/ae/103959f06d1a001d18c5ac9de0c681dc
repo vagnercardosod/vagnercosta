@@ -1,0 +1,38 @@
+package metodos;
+
+import static org.junit.Assert.assertEquals;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class MetodosDeTestes {
+	
+	WebDriver driver;
+	
+	
+	public void abrirNavegador(String url) {
+		
+	System.setProperty("webdriver.chrome.driver", "./Driver/chromedriver.exe");
+	driver = new ChromeDriver();
+	driver.manage().window().maximize();
+	driver.get(url);
+	
+	}
+	
+	
+	
+	public void validartitle(String titleEsperado) {
+		
+		String titulo = driver.getTitle();
+		assertEquals(titleEsperado, titulo);
+	
+	}
+	
+	public void fecharNavegador() {
+		driver.quit();
+
+		
+	}
+
+}
+
